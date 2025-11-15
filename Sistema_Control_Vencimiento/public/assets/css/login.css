@@ -1,0 +1,124 @@
+:root {
+    --bg: #efeef2;
+    --card: #ffffff;
+    --accent: #5b4a76;
+    --muted: #7a7890;
+    --btn-text: #fff;
+    --danger: #c82333;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #f3f2f6 0%, var(--bg) 100%);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(21,18,31,0.08);
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.brand {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.logo-sm {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background: linear-gradient(135deg,#fff,#f1eef6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 20px;
+    box-shadow: 0 6px 14px rgba(72,62,88,0.06);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.brand-info h1 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.brand-info p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* Formulario */
+label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #dcd9e6;
+    background: #fff;
+    font-size: 15px;
+}
+
+button.btn-login {
+    margin-top: 12px;
+    padding: 14px;
+    background: var(--accent);
+    color: var(--btn-text);
+    border: 0;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+    transition: transform .08s ease;
+}
+
+button.btn-login:active {
+    transform: translateY(1px);
+}
+
+.error-box {
+    background: #fff2f2;
+    color: #7a1515;
+    border: 1px solid #f0c6c6;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.help-text {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+}
