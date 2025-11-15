@@ -5,7 +5,7 @@ CREATE DATABASE sistema_vencimiento
 USE sistema_vencimiento;
 
 -- ============================================================
--- TABLA: rol
+-- TABLA: Rol
 -- ============================================================
 CREATE TABLE Rol (
   idRol INT AUTO_INCREMENT PRIMARY KEY,
@@ -14,7 +14,7 @@ CREATE TABLE Rol (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ============================================================
--- TABLA: usuario
+-- TABLA: Usuario
 -- ============================================================
 CREATE TABLE Usuario (
   idUsuario INT AUTO_INCREMENT PRIMARY KEY,
@@ -29,7 +29,7 @@ CREATE TABLE Usuario (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ============================================================
--- TABLA: proveedor
+-- TABLA: Proveedor
 -- ============================================================
 CREATE TABLE Proveedor (
   idProveedor INT AUTO_INCREMENT PRIMARY KEY,
@@ -41,7 +41,7 @@ CREATE TABLE Proveedor (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ============================================================
--- TABLA: categoria
+-- TABLA: Categoria
 -- ============================================================
 CREATE TABLE Categoria (
   idCategoria INT AUTO_INCREMENT PRIMARY KEY,
@@ -50,7 +50,7 @@ CREATE TABLE Categoria (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ============================================================
--- TABLA: producto (incluye codigo_producto)
+-- TABLA: Producto
 -- ============================================================
 CREATE TABLE Producto (
   idProducto INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,7 +64,7 @@ CREATE TABLE Producto (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ============================================================
--- TABLA: lote (incluye codigo_lote y referencia a producto)
+-- TABLA: Lote 
 -- ============================================================
 CREATE TABLE Lote (
   idLote INT AUTO_INCREMENT PRIMARY KEY,
@@ -86,12 +86,12 @@ CREATE TABLE Lote (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ============================================================
--- TABLA: umbral_alerta (umbral por rol o global)
+-- TABLA: Umbral_Alerta (umbral por rol o global)
 -- ============================================================
 CREATE TABLE Umbral_Alerta (
   idUmbral INT AUTO_INCREMENT PRIMARY KEY,
   idRol INT NULL,            -- NULL => umbral global
-  diasAntes INT NOT NULL,    -- p.ej. 30, 15, 7
+  diasAntes INT NOT NULL,    -- (30, 15, 7)
   activo TINYINT(1) NOT NULL DEFAULT 1,
   fechaCreacion DATETIME DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (idRol) REFERENCES Rol(idRol)
@@ -120,7 +120,7 @@ CREATE TABLE Alerta (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ============================================================
--- DATOS DE EJEMPLO / SEED
+-- DATOS DE EJEMPLO
 -- ============================================================
 -- Roles
 INSERT INTO Rol (nombre, descripcion) VALUES
@@ -128,13 +128,14 @@ INSERT INTO Rol (nombre, descripcion) VALUES
 ('Gerente','Acceso total al sistema y recibe alertas de vencimientos'),
 ('Encargado','Encargado de depósito');
 
--- Usuario demo (hash de 'admin123' generado con password_hash)
+-- Usuario demo (Administrador Demo y Encargado Demo)
 INSERT INTO Usuario (idRol, nombre, correo, contrasena) VALUES
 (1, 'Administrador Demo', 'admin@demo.com', '$2y$10$wQb4lJrZyPwhWhSAXzDdBeKMwCfxzBPzib2l4f2F/jbZ9DhRBdO2i');
 
 INSERT INTO Usuario (idRol, nombre, correo, contrasena) VALUES
 (3, 'Encargado Demo', 'encargado@demo.com', '$2y$10$Ex2PpSEfuKDP3GDZO8BSj.FQRVcO14HISUtWEY/2SoZL07NowSaiW');
 
+-- Actualizacion de contraseñas
 UPDATE Usuario
 SET contrasena = '$2y$10$qmuZJwE13dd9fy8xRMzJTeZXQmEeER6IGem6KjEo6p7vTsIq/n14K'
 WHERE correo = 'admin@demo.com';
@@ -156,19 +157,19 @@ INSERT INTO Categoria (nombre, descripcion) VALUES
 ('Lácteos','Productos derivados de la leche'),
 ('Bebidas','Refrescos, aguas, jugos');
 
--- Productos (con codigo_producto)
+-- Productos (con codigoProducto)
 INSERT INTO Producto (idCategoria, codigoProducto, nombre, descripcion) VALUES
 (1,'CREM-001','Crema de leche 1L','Crema pasteurizada de 1 litro'),
 (1,'QUES-500','Queso cheddar 500g','Queso cheddar en bloque'),
 (2,'AGUA-500','Agua mineral 500ml','Agua mineral sin gas');
 
--- Lotes (cada lote tiene su codigo_lote)
+-- Lotes (cada lote tiene su codigoLote)
 INSERT INTO Lote (idProducto, idProveedor, codigoLote, fechaIngreso, fechaVencimiento, cantidad) VALUES
 (1,1,'L-CREM-20251101','2025-10-01', DATE_ADD(CURDATE(), INTERVAL 30 DAY), 100),
 (2,2,'L-QUES-20251015','2025-09-15', DATE_ADD(CURDATE(), INTERVAL 15 DAY), 50),
 (3,1,'L-AGUA-20251029','2025-09-29', DATE_ADD(CURDATE(), INTERVAL 7 DAY), 200);
 
--- Umbrales por defecto (globales: id_rol NULL)
+-- Umbrales por defecto (globales: idRol NULL)
 INSERT INTO Umbral_Alerta (idRol, diasAntes, activo) VALUES
 (NULL, 30, 1),
 (NULL, 15, 1),
@@ -188,10 +189,8 @@ UPDATE Usuario
 SET contrasena = '$2y$10$PEovNjJN.o2.MlxYLz8u.uLu/1PWE1hgQTM4mi2RUZNbb3UsYx6x.'
 WHERE correo = 'admin@demo.com';
 
--- ELIMINAR COLUMNA
+-- ELIMINAR COLUMNA DE Alerta
 ALTER TABLE Alerta DROP COLUMN fechaCreacion;
-
-
 
 SHOW TABLES;
 SELECT COUNT(*) AS total_roles FROM Rol;
@@ -202,5 +201,4 @@ SELECT COUNT(*) AS total_umbral FROM Umbral_Alerta;
 SELECT COUNT(*) AS total_alertas FROM Alerta;
 
 SELECT * FROM Lote;
-
 SELECT * FROM Usuario;
