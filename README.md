@@ -18,7 +18,8 @@ Instalar XAMPP e iniciar (start):
   - Apache (es lo unico que usaremos)
 
 2. Copiar el proyecto a la carpeta del servidor (Xampp):
-  - Pegar carpeta en C:\xampp\htdocs (o ruta de instalacion de Xampp, pero dentro de la carpeta htdocs)
+  - Pegar carpeta en ruta de instalacion. Ejemplo:
+    - C:\xampp\htdocs
 
 3. Crear la Base de Datos:
   - Abrir MySQL Workbench
