@@ -184,10 +184,6 @@ SELECT idUsuario, idRol, nombre, correo, contrasena, activo
 FROM Usuario
 WHERE correo = 'admin@demo.com' OR nombre = 'admin@demo.com' LIMIT 1;
 
--- ACTUALIZACION CONTRASEÑA DEMO
-UPDATE Usuario
-SET contrasena = '$2y$10$PEovNjJN.o2.MlxYLz8u.uLu/1PWE1hgQTM4mi2RUZNbb3UsYx6x.'
-WHERE correo = 'admin@demo.com';
 
 -- ELIMINAR COLUMNA DE Alerta
 ALTER TABLE Alerta DROP COLUMN fechaCreacion;
