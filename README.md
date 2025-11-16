@@ -1,4 +1,5 @@
-# Prototipado-Tecnologico-SCV
+# Sistema de Gestion de Control de Vencimiento de Mercaderia (para distribuidoras)
+Sistema desarrollado desarrollado que permite gestionar productos, registrar lotes, calcular fechas de vencimiento y generar alertas automáticas cuando se aproxima una fecha de caducidad.
 
 ## 🚀 Tecnologías Utilizadas
   - Frontend: HTML, CSS, JavaScript
@@ -34,8 +35,8 @@ Instalar XAMPP e iniciar (start):
 // Configuración de conexión a la base de datos
 'db_host' => '127.0.0.1',
 'db_name' => 'sistema_vencimiento',
-'db_user' => ' ',   # Usuario de MySQL
-'db_pass' => ' ',   # Contraseña en caso de tenerla
+'db_user' => ' ',   // Usuario de MySQL
+'db_pass' => ' ',   // Contraseña en caso de tenerla
 'db_charset' => 'utf8mb4',
 ```
 
