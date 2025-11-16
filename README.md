@@ -1,5 +1,5 @@
-# Sistema de Gestion de Control de Vencimiento de Mercaderia (para distribuidoras)
-Sistema desarrollado desarrollado que permite gestionar productos, registrar lotes, calcular fechas de vencimiento y generar alertas automáticas cuando se aproxima una fecha de caducidad.
+# Sistema de Gestion de Control de Vencimiento de Mercaderia
+Aplicación web diseñada para gestionar productos, lotes y fechas de vencimiento para distribuidoras de alimentos. Permite registrar productos, cargar lotes con sus respectivas fechas de vencimiento y generar alertas automáticas cuando un artículo está próximo a vencer
 
 ## 🚀 Tecnologías Utilizadas
   - Frontend: HTML, CSS, JavaScript
@@ -146,10 +146,13 @@ A continuación, se presenta un conjunto de mejoras planificadas para optimizar 
      - Configurar plantilla HTML para envío de notificaciones.
 
   5. Panel de estadísticas:
-     - Dashboard con gráficos
+     - Dashboard con gráficos.
+     - Metricas.
 
   6. Exportación a PDF y Excel:
      - Por ahora solo exporta en CSV.
+
+  7. Implemetar registro de mercaderia por medio de codigo de barra o QR.
 
 ## 👨‍💻 Autor
 Osinaga Diego Fernando
