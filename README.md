@@ -1,18 +1,18 @@
 # Prototipado-Tecnologico-SCV
 
-🚀 Tecnologías Utilizadas
-Frontend: HTML, CSS, JavaScript
-Backend: PHP 8 o superior, XAMPP (Apache + PHP)
-Base de Datos: MySQL Workbench
+## 🚀 Tecnologías Utilizadas
+  - Frontend: HTML, CSS, JavaScript
+  - Backend: PHP 8 o superior, XAMPP (Apache + PHP)
+  - Base de Datos: MySQL Workbench
 
-📋 Requisitos Previos
+## 📋 Requisitos Previos
 Antes de ejecutar el sistema, asegurate de tener instalado:
   - XAMPP 
   - MySQL Workbench  
   - PHP 8 o superior  
   - Navegador web (Chrome o Edge recomendados)
 
-🔧 Instalación y Configuración
+## 🔧 Instalación y Configuración
 1. Instalar servidor local:
 Instalar XAMPP (recomendado) e iniciar (start):
   - Apache (es lo unico que usaremos)
@@ -40,7 +40,7 @@ Instalar XAMPP (recomendado) e iniciar (start):
   - Ejecutar desde el navegador:
     http://localhost/Sistema_Control_Vencimiento/public/login.php
 
-🔐 Usuarios de Prueba
+## 🔐 Usuarios de Prueba
 Se incluyen credenciales para iniciar sesion:
   - Administrador
       correo: admin@demo.com
