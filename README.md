@@ -14,7 +14,7 @@ Antes de ejecutar el sistema, asegurate de tener instalado:
 
 ## 🔧 Instalación y Configuración
 1. Instalar servidor local:
-Instalar XAMPP (recomendado) e iniciar (start):
+Instalar XAMPP e iniciar (start):
   - Apache (es lo unico que usaremos)
 
 2. Copiar el proyecto a la carpeta del servidor (Xampp):
@@ -28,7 +28,7 @@ Instalar XAMPP (recomendado) e iniciar (start):
 4. Configurar conexion a la base de datos:
   - Abrir la carpeta "src" del prototipo
   - Seleccionar el archivo configuracion.php
-  - Modificar credenciales:
+  - Modificar credenciales: .env
     'db_host' => '127.0.0.1',
     'db_port' => '3306',
     'db_name' => 'sistema_vencimiento',
