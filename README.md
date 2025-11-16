@@ -14,6 +14,9 @@ Antes de ejecutar el sistema, asegurate de tener instalado:
   - Navegador web (Chrome o Edge recomendados)
 
 ## 🔧 Instalación y Configuración
+Extra: en caso de usar VSC, dejo un video explicativo de como confugurar PHP!
+https://www.youtube.com/watch?v=sL5s2-ILbEc
+
 1. Instalar servidor local:
 Instalar XAMPP e iniciar (start):
   - Apache (es lo unico que usaremos)
