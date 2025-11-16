@@ -37,15 +37,15 @@ Instalar XAMPP e iniciar (start):
     'db_charset' => 'utf8mb4',
 
 5. Ejecutar Sistema:
-  - Ejecutar desde el navegador:
+  - Ejecutar desde el navegador: ".env
     http://localhost/Sistema_Control_Vencimiento/public/login.php
 
 ## 🔐 Usuarios de Prueba
 Se incluyen credenciales para iniciar sesion:
   - Administrador
-      correo: admin@demo.com
-      contraseña: Admin123!
+    - correo: admin@demo.com
+    - contraseña: Admin123!
   
   - Encargado (de Deposito)
-      correo: encargado@demo.com
-      contraseña: Encargado123!
+    - correo: encargado@demo.com
+    - contraseña: Encargado123!
