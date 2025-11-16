@@ -50,3 +50,63 @@ Se incluyen credenciales para iniciar sesion:
   - Encargado (de Deposito)
     - correo: encargado@demo.com
     - contraseña: Encargado123!
+
+## 📂 Estructura del Proyecto
+
+<pre>
+  └── SISTEMA_CONTROL_VENCIMIENTOS/
+    ├── public/
+    │   ├── api/                           # BACKEND (endpoints PHP)
+    │   │   ├── count_productos.php
+    │   │   ├── generar_alertas.php
+    │   │   ├── get_alertas.php
+    │   │   ├── historial_alertas.php
+    │   │   ├── importar_csv.php
+    │   │   ├── listar_productos.php
+    │   │   ├── marcar_alerta.php
+    │   │   ├── obtener_proximos.php
+    │   │   ├── registrar_lote.php
+    │   │   ├── registrar_producto.php
+    │   │   └── ...
+    │   │
+    │   ├── assets/                        # FRONTEND (estilos y scripts)
+    │   │   ├── css/
+    │   │   │   ├── alertas.css
+    │   │   │   ├── inicio.css
+    │   │   │   ├── login.css
+    │   │   │   ├── registrar_lote.css
+    │   │   │   └── registrar_producto.css
+    │   │   │
+    │   │   └── js/                        # Scripts a implementar!
+    │   │       ├── inicio.js
+    │   │       └── ...
+    │   │
+    │   ├── alertas.php
+    │   ├── exportar_vencimientos.php
+    │   ├── historial_alertas.php
+    │   ├── index.php
+    │   ├── inicio.php
+    │   ├── login.php
+    │   ├── logout.php
+    │   ├── registrar_lote.php
+    │   └── registrar_producto.php
+    │
+    ├── src/                           # BACKEND - Lógica interna
+    │   ├── model/                     # BACKEND — Modelos principales del sistema (a implementar)
+    │        ├── alerta_model.php
+    │        ├── producto_model.php
+    │        └── lote_model.php 
+    │   ├── autenticacion.php      # Lógica de login y sesiones
+    │   ├── conexion.php           # Conexión PDO a MySQL
+    │   ├── configuracion.php      # Credenciales de conexion
+    │   ├── correo.php             # Notificaciones por email (falta desarrollar)
+    │   └── helper.php             # Funciones auxiliares
+    │
+    ├── tools/                         # BACKEND - Herramientas administrativas
+    │   ├── convertir_contraseña.php   # Generador de contraseñas con password_hash
+    │   ├── crear_usuario.php          # Falta terminar de desarrollar
+    │   └── prueba_db.php              # Test de conexión
+    │
+    ├── README.md
+    └── sistema_vencimiento.sql 
+</pre>
