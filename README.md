@@ -30,12 +30,12 @@ Instalar XAMPP e iniciar (start):
   - Abrir la carpeta "src" del prototipo
   - Seleccionar el archivo configuracion.php
   - Modificar credenciales:
-    - 'db_host' => '127.0.0.1',
-    - 'db_port' => '3306',
-    - 'db_name' => 'sistema_vencimiento',
-    - 'db_user' => '', // usuario de MySQL
-    - 'db_pass' => '', // contraseña si corresponde
-    - 'db_charset' => 'utf8mb4',
+   <pre> ```'db_host' => '127.0.0.1',
+    'db_port' => '3306',
+    'db_name' => 'sistema_vencimiento',
+    'db_user' => ' ', // usuario de MySQL
+    'db_pass' => ' ', // contraseña si corresponde
+    'db_charset' => 'utf8mb4', ``` </pre>
 
 5. Ejecutar Sistema:
   - Ejecutar desde el navegador:
