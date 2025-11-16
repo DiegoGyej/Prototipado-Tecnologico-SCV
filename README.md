@@ -114,7 +114,28 @@ Se incluyen credenciales para iniciar sesion:
 </pre>
 
 ## 📝 Mejoras Futuras
+A continuación, se presenta un conjunto de mejoras planificadas para optimizar la arquitectura, aumentar la escalabilidad y completar módulos que están en estado inicial.
+  1. Reorganización y mejora del código:
+     - Reacomodar y estandarizar el código del backend y frontend.
+     - Implementar un patrón más estructurado para controladores y modelos.
 
+  2. Completar los modelos del backend (model/):
+     - Para lograr una mejor logica de acceso y manipulacion de datos.
+
+  3. Crear archivos JavaScript para cada módulo:
+     - Para tener mayor orden interno.
+     - Para reutilizacion del codigo.
+
+  4. Finalizar módulo de notificaciones (correo.php):
+     - Implementar envío de correos automáticos para alertas de productos próximos a vencer.
+     - Integrar PHPMailer.
+     - Configurar plantilla HTML para envío de notificaciones.
+
+  5. Panel de estadísticas:
+     - Dashboard con gráficos
+
+  6. Exportación a PDF y Excel:
+     - Por ahora solo exporta en CSV.
 
 ## 👨‍💻 Autor
 Osinaga Diego Fernando
