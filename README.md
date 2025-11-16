@@ -28,17 +28,17 @@ Instalar XAMPP e iniciar (start):
 4. Configurar conexion a la base de datos:
   - Abrir la carpeta "src" del prototipo
   - Seleccionar el archivo configuracion.php
-  - Modificar credenciales: .env
-    'db_host' => '127.0.0.1',
-    'db_port' => '3306',
-    'db_name' => 'sistema_vencimiento',
-    'db_user' => '', // usuario de MySQL
-    'db_pass' => '', // contraseña si corresponde
-    'db_charset' => 'utf8mb4',
+  - Modificar credenciales:
+    - 'db_host' => '127.0.0.1',
+    - 'db_port' => '3306',
+    - 'db_name' => 'sistema_vencimiento',
+    - 'db_user' => '', // usuario de MySQL
+    - 'db_pass' => '', // contraseña si corresponde
+    - 'db_charset' => 'utf8mb4',
 
 5. Ejecutar Sistema:
-  - Ejecutar desde el navegador: ".env
-    http://localhost/Sistema_Control_Vencimiento/public/login.php
+  - Ejecutar desde el navegador:
+    - http://localhost/Sistema_Control_Vencimiento/public/login.php
 
 ## 🔐 Usuarios de Prueba
 Se incluyen credenciales para iniciar sesion:
