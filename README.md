@@ -53,6 +53,19 @@ Se incluyen credenciales para iniciar sesion:
     - correo: encargado@demo.com
     - contraseña: Encargado123!
 
+## 👥 Rol de Usuario
+  - Administrador
+    - Registrar Producto
+    - Registrar Lote
+    - Alertas (realizar acciones)
+    - Generar Alertas
+    - Exportar CSV
+
+  - Encargado (de Deposito)
+    - Registrar Producto
+    - Registrar Lote
+    - Alertas (Solo lectura)
+
 ## 📂 Estructura del Proyecto
 
 <pre>
