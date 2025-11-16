@@ -34,8 +34,8 @@ Instalar XAMPP e iniciar (start):
 // Configuración de conexión a la base de datos
 'db_host' => '127.0.0.1',
 'db_name' => 'sistema_vencimiento',
-'db_user' => 'root',
-'db_pass' => '',
+'db_user' => ' ',   # Usuario de MySQL
+'db_pass' => ' ',   # Contraseña en caso de tenerla
 'db_charset' => 'utf8mb4',
 ```
 
@@ -112,3 +112,12 @@ Se incluyen credenciales para iniciar sesion:
     ├── README.md
     └── sistema_vencimiento.sql 
 </pre>
+
+## 📝 Mejoras Futuras
+
+
+## 👨‍💻 Autor
+Osinaga Diego Fernando
+
+## 📄 Licencia
+Este proyecto fue desarrollado con fines académicos.
