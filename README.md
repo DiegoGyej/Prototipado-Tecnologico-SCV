@@ -18,8 +18,8 @@ Extra: en caso de usar VSC, dejo un video explicativo de como confugurar PHP!
 https://www.youtube.com/watch?v=sL5s2-ILbEc
 
 1. Instalar servidor local:
-Instalar XAMPP e iniciar (start):
-  - Apache (es lo unico que usaremos)
+Instalar XAMPP e iniciar:
+  - Iniciar Apache (es lo unico que usaremos)
 
 2. Copiar el proyecto a la carpeta del servidor (Xampp):
   - Pegar carpeta en ruta de instalacion. Ejemplo:
